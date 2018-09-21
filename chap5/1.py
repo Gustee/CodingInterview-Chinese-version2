@@ -1,24 +1,38 @@
 # 数组中出现次数超过一半的数字
 # 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。
 
+'''
+思路一：
+数组中有一个数字出现的次数超过数组长度的一半，也就是它出现的次数比其他所有数字出现的次数的和还要多。
+在遍历数组时保存数组的一个数字和出现的次数，当遍历到下一个数字和之前保存的数字相同时，次数加1
+如果不同，则次数减1。如果次数减为零，则将保存的数字更新为新的数字，并将次数重新设为1。
+则要找的元素即为最后保存的数字
+
+思路二：
+数组中有一个数字出现的次数超过数组长度的一半，那么排序之后位于数组中间的数字即为该数字。
+根据快排的划分过程，选一个数，调整数组位置，使得比选中的数小的排在左边，大的排在右边。
+如果选中的数字的刚好在数组中间，那么这个数就是数组的中位数，若在数组右边，则中位数位于他的左边，则在左边继续查找。
+否则在右边继续查找。
+'''
+
 class Solution:
     def MoreThanHalfNum_Solution(self, numbers):
-        # write code here
         count = 1
-        num = numbers[0]
+        res = numbers[0]
         for i in numbers[1:]:
-            if i == num:
+            if i == res:
                 count += 1
             else:
                 count -= 1
                 if count == 0:
-                    num = i
+                    res = i
                     count = 1
+        # 检查该元素出现次数是否超过数组长度的一半
         sum = 0
         for j in numbers:
-            if j == num:
+            if j == res:
                 sum += 1
         if sum > int(len(numbers)/2):
-            return num
+            return res
         return 0
 
