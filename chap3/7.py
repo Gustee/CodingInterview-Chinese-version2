@@ -33,8 +33,3 @@ class Solution:
         arr[i] = arr[j]
         arr[j] = t
 
-
-l = [1,2,3,4,5,6,7]
-s = Solution()
-s.reOrderArray_2(l)
-print(l)

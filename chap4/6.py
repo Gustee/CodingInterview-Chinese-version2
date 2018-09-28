@@ -1,6 +1,11 @@
 # 从上到下打印二叉树
 # 不分行从上到下打印二叉树。
 
+'''
+思路：
+二叉树的层次遍历
+'''
+
 class TreeNode:
     def __init__(self, x):
         self.val = x

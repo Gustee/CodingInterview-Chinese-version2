@@ -23,17 +23,3 @@ class Solution:
             behind = behind.next
         return behind
 
-
-if __name__ == '__main__':
-    s = Solution()
-    l = [3,2,1,5]
-    newlist = ListNode(0)
-    pre = newlist
-    for i in l:
-        pre.next = ListNode(i)
-        pre = pre.next
-
-    head = newlist.next
-    while head.next:
-        print(head.val)
-        head = head.next

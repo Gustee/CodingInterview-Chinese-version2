@@ -36,7 +36,3 @@ class Solution:
                 visited[index] = False
         return flag
 
-
-if __name__ == '__main__':
-    s = Solution()
-    print(s.hasPath("ABCESFCSADEE", 3, 4, "ABCCED"))

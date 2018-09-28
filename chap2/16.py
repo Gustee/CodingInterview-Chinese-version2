@@ -1,5 +1,4 @@
 # 给你一根长度为n的绳子，请把绳子剪成m段，每段绳子的长度记为k[0],k[1],...k[m]，请问k[0]*k[1]*...*k[m]可能的最大乘积是多少？
-import random
 
 
 class Solution:
@@ -43,11 +42,3 @@ class Solution:
         return pow(3, timesOf3) * pow(2, timesOf2)
 
 
-if __name__ == '__main__':
-    s = Solution()
-    for i in range(100):
-        x = random.randint(1, 1000)
-        if s.maxProductAfterCutting_dp(x) != s.maxProductAfterCutting_greedy(x):
-            print('fuck')
-            break
-    print('yes')

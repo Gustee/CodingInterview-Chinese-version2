@@ -1,5 +1,6 @@
 # 字符串的排列
 # 输入一个字符串,打印出该字符串中字符的所有排列
+
 class Solution:
     def Permutation(self, ss):
         # write code here

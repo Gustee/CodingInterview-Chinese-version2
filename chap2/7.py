@@ -6,7 +6,6 @@
 #   2     3
 # 4     5   6
 #   7      8
-from queue import Queue
 
 class TreeNode:
     def __init__(self, val):
@@ -30,26 +29,3 @@ def construct(preorder, inorder):
 
 
 
-
-
-# def inorder_(root):
-#     if root is None:
-#         return
-#     inorder_(root.left)
-#     print(root.value, end=' ')
-#     inorder_(root.right)
-#
-#
-# def preorder(root):
-#     if root is None:
-#         return
-#     print(root.value, end=' ')
-#     preorder(root.left)
-#     preorder(root.right)
-#
-# pre = [1,2,4,7,3,5,6,8]
-# inorder = [4,7,2,1,5,3,8,6]
-# root = construct(pre, inorder)
-# inorder_(root)
-# print()
-# preorder(root)

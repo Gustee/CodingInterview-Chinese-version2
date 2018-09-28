@@ -53,28 +53,3 @@ class Solution:
 
 
 
-
-res = [1,2,3,3,4,4,5]
-# x = 0
-# for i in range(len(res)):
-#     if res[x] != res[i]:
-#         x += 1
-#         res[x] = res[i]
-#
-# print(res[:x+1])
-newlist = ListNode(0)
-pre = newlist
-for i in res:
-    node = ListNode(i)
-    pre.next = node
-    pre = node
-head = newlist.next
-while newlist.next:
-    print(newlist.next.val)
-    newlist = newlist.next
-s = Solution()
-s.deleteDuplication_2(head)
-print('-------')
-while head:
-    print(head.val)
-    head = head.next
