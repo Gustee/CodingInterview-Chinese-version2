@@ -10,38 +10,28 @@
 
 class Solution:
     def ReverseSentence(self, s):
-        # write code here
-        if s == None or len(s) <= 0:
+        if not s:
             return ''
-        s = list(s)
-        s = self.Reverse(s)
-        pStart = 0
-        pEnd = 0
-        listTemp = []
-        result = ''
-
-        while pEnd < len(s):
-            if pEnd == len(s) - 1:
-                listTemp.append(self.Reverse(s[pStart:]))
-                break
-            if s[pStart] == ' ':
-                pStart += 1
-                pEnd += 1
-                listTemp.append(' ')
-            elif s[pEnd] == ' ':
-                listTemp.append(self.Reverse(s[pStart:pEnd]))
-                pStart = pEnd
+        l = len(s)
+        s = self.Reverse(s, 0, l-1)
+        start = end = 0
+        while end <= l:
+            if end == l or s[end] == ' ':
+                s = self.Reverse(s, start, end-1)
+                end += 1
+                start = end
+            elif s[start] == ' ':
+                start += 1
+                end += 1
             else:
-                pEnd += 1
-        for i in listTemp:
-            result += ''.join(i)
-        return result
+                end += 1
+        return s
 
-    def Reverse(self, s):
-        start = 0
-        end = len(s) - 1
-        while start < end:
+
+    def Reverse(self, s, start, end):
+        s = list(s)
+        while start <= end:
             s[start], s[end] = s[end], s[start]
             start += 1
             end -= 1
-        return s
+        return ''.join(s)
