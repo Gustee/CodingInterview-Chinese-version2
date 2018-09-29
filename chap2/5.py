@@ -2,5 +2,7 @@
 # 例如，输入"we are happy." 则输出"we%20are%20happy"
 
 
-def replace_bank(s):
-    return s.replace(' ', '%20')
+class Solution:
+    # s 源字符串
+    def replaceSpace(self, s):
+        return s.replace(' ', '%20')
