@@ -2,7 +2,7 @@
 **[牛客网](https://www.nowcoder.com/ta/coding-interviews?page=1)中只有第一版的题目，还没有更新第二版的题目，所以只有大部分题目在牛客中AC了，其他的题目大体都没有问题，如果有问题 welcome issue**
 
 ## 第二章
-### 找出数组中重复的数字
+### [找出数组中重复的数字](https://github.com/Gustee/CodingInterview-Chinese-version2/blob/master/chap2/3_1.py)
 在一个长度为n的数组李的所有数字都在0~n-1的范围内。
 数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次
 例：输入长度为7的数组[2,3,1,0,2,5,3] 对应的输出是重复的数字2或3
