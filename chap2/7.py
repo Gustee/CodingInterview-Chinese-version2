@@ -7,25 +7,27 @@
 # 4     5   6
 #   7      8
 
+
 class TreeNode:
-    def __init__(self, val):
-        self.value = val
-        self.right = None
+    def __init__(self, x):
+        self.val = x
         self.left = None
+        self.right = None
 
 
-def construct(preorder, inorder):
-    if preorder is None or len(preorder) == 0:
-        return None
-    if inorder is None or len(inorder) == 0:
-        return None
-    val = preorder[0]
-    head = TreeNode(val)
-    index = inorder.index(val)
-    head.left = construct(preorder[1:1+index], inorder[0:index])
-    head.right = construct(preorder[1+index:], inorder[index+1:])
-    return head
-
+class Solution:
+    # 返回构造的TreeNode根节点
+    def reConstructBinaryTree(self, preorder, inorder):
+        if preorder is None or len(preorder) == 0:
+            return None
+        if inorder is None or len(inorder) == 0:
+            return None
+        val = preorder[0]
+        head = TreeNode(val)
+        index = inorder.index(val)
+        head.left = self.reConstructBinaryTree(preorder[1:1+index], inorder[0:index])
+        head.right = self.reConstructBinaryTree(preorder[1+index:], inorder[index+1:])
+        return head
 
 
 

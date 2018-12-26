@@ -38,3 +38,28 @@
 ## [替换空格](https://github.com/Gustee/CodingInterview-Chinese-version2/blob/master/chap2/5.py)
 请实现一个函数，把字符串中的每个空格替换成"%20".
 例如，输入"we are happy." 则输出"we%20are%20happy"
+
+## [从尾到头打印链表](https://github.com/Gustee/CodingInterview-Chinese-version2/blob/master/chap2/6.py)
+输入一个链表的头节点，从尾到头反过来打印出每个节点的值
+
+**思路**
+将所有节点入栈，然后在依次弹出打印即可
+或者使用递归的方式打印
+
+## [重建二叉树](https://github.com/Gustee/CodingInterview-Chinese-version2/blob/master/chap2/7.py)
+输入某个二叉树的前序遍历和中序遍历的结果，请重建该二叉树。
+例如输入前序遍历序列[1,2,4,7,3,5,6,8]和中序遍历序列[4,7,2,1,5,3,8,6],
+则重建如下图所示二叉树
+     1
+  2     3
+4     5   6
+  7      8
+
+**思路**
+
+
+## [二叉树的下一个节点](https://github.com/Gustee/CodingInterview-Chinese-version2/blob/master/chap2/8.py)
+给定一颗二叉树和其中的一个节点，如何找出中序遍历序列的下一个节点。
+树的节点出了有两个分别指向左、右子节点的指针，还有一个指向父节点的指针
+
+**思路**
